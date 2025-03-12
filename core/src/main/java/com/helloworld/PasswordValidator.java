@@ -9,8 +9,10 @@ public interface PasswordValidator {
     final static char END_NUMBERS = '9';
     final static String SYMBOLS = "_-!+-?.,{}[]";
 
-    final static int LENGTH_THRESHOLD = 8;
+    final static int SCORE_THRESHOLD = 8;
 
+
+    public boolean isValid(int strength);
 
     public int calcPasswordStrength(String password);
 

@@ -19,6 +19,11 @@ public class PasswordValidatorV1 implements PasswordValidator {
     }
 
     @Override
+    public boolean isValid(int strength) {
+        return strength < SCORE_THRESHOLD;
+    }
+
+    @Override
     public int calcPasswordStrength(String password) {
         int score = 0;
         score += punctuateLength(password);
